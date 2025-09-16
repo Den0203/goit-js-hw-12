@@ -7,12 +7,112 @@
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+.form input[name='search-text'] {
+  padding: 8px 12px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+  height: 40;
+  margin: 8px auto 8px auto;
+}
+
+.form input[name='search-text']:focus {
+  border-color: #1d72b8;
+  box-shadow: 0 0 5px rgba(29, 114, 184, 0.5);
+}
+
+.form button[type='submit'] {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 75px;
+  height: 40px;
+  background: #4e75ff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.form button[type='submit']:active {
+  background: #6a8fff;
+}
+
+.form button[type='submit']:hover {
+  background: #5f7fff;
+}
+.gallery {
+  margin-top: 20px;
+}
+
+.form {
+  margin: 0 auto;
+}
+.loader {
+  display: none;
+  font-size: 16px;
+  color: #4e75ff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.loader.visible {
+  display: block;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  list-style: none;
+  padding: 24px;
+  margin: 0;
+}
+
+.gallery-item {
+  background-color: #f9f9f9;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item .info {
+  padding: 8px;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.wrapper {
+  border: solid 1px;
+}
+
+.load-more {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background: #4e75ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.load-more.hidden {
+  display: none;
+}
